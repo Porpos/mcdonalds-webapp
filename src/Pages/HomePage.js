@@ -6,7 +6,9 @@ const HomePage = () => {
     <>
       <div className="container">
         <Sidebar></Sidebar>
-        <HomePageContent></HomePageContent>
+        <div className="home-container">
+          <HomePageContent></HomePageContent>
+        </div>
       </div>
     </>
   );

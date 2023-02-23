@@ -15,7 +15,7 @@ const Header = () => {
   const CartTotal = () => {
     let total = 0;
     Cart.map((item) => (total += item.price));
-    return (Math.floor(total) - 0.1).toFixed(2);
+    return (Math.floor(total) - 0.1).toFixed(2)>0?(Math.floor(total) - 0.1).toFixed(2):0;
   };
 
   return (
@@ -24,12 +24,12 @@ const Header = () => {
       <header>
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/260px-McDonald%27s_Golden_Arches.svg.png"
             alt="logo"
           />
           <div onClick={openCloseCheckout} className="cart-wrapper">
             <BsBasket
-              color="rgb(255, 0, 43)"
+              color="white"
               style={{ height: "auto", width: "30px" }}
             />
             <span>{Cart.length}</span>
