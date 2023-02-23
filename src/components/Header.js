@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-      {checkoutShow && <CartItems />}
+      {checkoutShow && <CartItems close={openCloseCheckout} />}
       <header>
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <img

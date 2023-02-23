@@ -11,11 +11,9 @@ const Card = (props) => {
       )}
       <img src={props.pic} alt={props.name + " picture"} />
 
-      <h2>
-        {props.name}
+      <h2>{props.name}</h2>
+      <div className="card-button-wrapper">
         <span className="card-price"> {props.price}0 $</span>
-      </h2>
-      <div>
         <button
           onClick={() => {
             props.addToCart({ name: props.name, price: props.price });
@@ -24,9 +22,13 @@ const Card = (props) => {
         >
           Add to Cart
         </button>
+        <div className="card-quantity">
+          <button>+</button>
+          <button>-</button>
+        </div>
       </div>
       <br />
-      <i>{props.cal} calorie</i>
+      <i>"{props.cal} cal"</i>
     </div>
   );
 };
