@@ -449,10 +449,11 @@ header nav ul li {
 }
 
 .checkout-container>ul {
-  padding-inline:20px;
+  padding-inline:0;
   height: auto;
   max-height: 500px;
   overflow-y: auto;
+  list-style: none;
 
 }
 

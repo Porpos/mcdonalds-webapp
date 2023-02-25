@@ -17,7 +17,7 @@ const CartItems = (props) => {
           <ul>
             {Cart.map((item) => (
               <li key={"cartItem0" + Cart.indexOf(item)}>
-                {item.name}: {item.price}0 $
+                <span style={{color:'rgb(255, 0, 43)',fontSize:'23px',fontWeight:'bold'}}>x{item.quantity} </span> {item.name}
               </li>
             ))}
           </ul>

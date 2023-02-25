@@ -1,11 +1,12 @@
 import { useCartContext } from "../providers/CartProvider";
+
 import Card from "../components/Card";
 import Sidebar from "../components/Sidebar";
 const DUMMY_MEALS = [
   {
     name: "Big Mac",
     price: 12.9,
-    campaign:'Buy 1 Get 1',
+    campaign: "Buy 1 Get 1 Free",
     cal: 550,
     pictureLink:
       "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0005_BigMac_832x472:product-header-desktop?wid=830&hei=458&dpr=off",
@@ -20,7 +21,7 @@ const DUMMY_MEALS = [
   {
     name: "Bacon, Egg & Cheese Biscuit",
     price: 4.9,
-    campaign:'Get 2$ Coupon',
+    campaign: "Get 2$ Coupon",
     cal: 460,
     pictureLink:
       "https://s7d1.scene7.com/is/image/mcdonalds/DC_202211_0085_BaconEggCheeseBiscuit_832x472:product-header-desktop?wid=830&hei=458&dpr=off",
@@ -81,17 +82,19 @@ const DUMMY_MEALS = [
     pictureLink:
       "https://s7d1.scene7.com/is/image/mcdonalds/DC_202211_0085_BaconEggCheeseBiscuit_832x472:product-header-desktop?wid=830&hei=458&dpr=off",
   },
-
 ];
+
+
 
 const Meals = () => {
   const { addToCart } = useCartContext();
-
+  
   return (
     <div className="container">
+     
       <Sidebar></Sidebar>
       <div className="meals-container">
-        {DUMMY_MEALS.map((item,index) => (
+        {DUMMY_MEALS.map((item, index) => (
           <Card
             key={index}
             campaign={item?.campaign}
@@ -100,6 +103,8 @@ const Meals = () => {
             price={item.price}
             cal={item.cal}
             pic={item.pictureLink}
+           
+           
           />
         ))}
       </div>
